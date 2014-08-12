@@ -1,0 +1,29 @@
+{{#className}}{{className}}.{{/className}}{{name}}({{#paramsString}}{{paramsString}}{{/paramsString}}) {{#version}}{{version}}{{/version}}
+-----------------------------
+{{#description}}
+{{{description}}}
+
+{{/description}}
+{{#deprecated}}
+Deprecated: {{{deprecated}}}
+
+{{/deprecated}}
+{{#hasParams}}
+**Parameters**
+```
+{{#params}}
+{{name}}: {{#typesString}}{{typesString}}, {{/typesString}}{{#description}}{{{description}}}{{/description}}
+
+{{/params}}
+```
+{{/hasParams}}
+{{#fires}}
+**Fires**: {{.}}
+
+{{/fires}}
+{{#returns}}
+**Returns**: {{#typesString}}{{typesString}}{{/typesString}}
+```
+{{#description}}{{{description}}}{{/description}}
+```
+{{/returns}}
